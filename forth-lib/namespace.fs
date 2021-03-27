@@ -6,14 +6,14 @@
 ( wl " vocab" --)
 : NS-VOCAB
 	CREATE ,
-\ First search order wordlist set to namespace's
+\ Push namespace's wordlist onto search order
 ( --)
 DOES>
 	@ >R
 	( ) ( R: wl)
 	GET-ORDER
 	( wl_n ... wl_1 n)
-	NIP R> SWAP SET-ORDER ;
+	1+ R> SWAP SET-ORDER ;
 
 \ Create word for postponing name in namespace's wordlist
 ( wl " prefix" --)
