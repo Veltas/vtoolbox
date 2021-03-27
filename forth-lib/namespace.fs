@@ -19,7 +19,7 @@ DOES>
 ( wl " prefix" --)
 : NS-PREFIX
 	CREATE , IMMEDIATE
-\ Find given name in namespace's wordlist and compile it
+\ Run/compile given name in namespace's wordlist
 ( " name" --)
 DOES>
 	@
@@ -31,7 +31,8 @@ DOES>
 		( xt -1|1)
 		2R> 2DROP
 		( R: )
-		0< IF COMPILE, ELSE EXECUTE THEN
+		0< IF STATE @ IF COMPILE, EXIT THEN THEN
+		EXECUTE
 	ELSE
 		( )
 		2R> TYPE -1 ABORT" ?"

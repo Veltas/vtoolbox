@@ -18,3 +18,5 @@ ALSO LOCAL
 PREVIOUS
 
 TEST2 TEST CR \ Prints 12
+
+LOCAL: X  LOCAL: Y  * .  CR  \ Prints 35
