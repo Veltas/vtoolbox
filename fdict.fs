@@ -1,4 +1,4 @@
-\ Copyright (c) 2021 Christopher Leonard, MIT Licence
+\ Copyright (c) 2021-2022 Christopher Leonard, MIT Licence
 
 \ Working with floats in the dictionary, see examples/fdict.fs
 

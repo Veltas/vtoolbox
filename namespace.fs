@@ -1,4 +1,4 @@
-\ Copyright (c) 2021 Christopher Leonard, MIT Licence
+\ Copyright (c) 2021-2022 Christopher Leonard, MIT Licence
 
 \ Namespace functionality, see examples/namespaces.fs
 
