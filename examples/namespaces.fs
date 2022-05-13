@@ -1,22 +1,20 @@
-\ Copyright (c) 2021 Christopher Leonard, MIT Licence
+\ Copyright (c) 2021-2022 Christopher Leonard, MIT Licence
 
-INCLUDE forth-lib/namespace.fs
+require vtoolbox/namespace.fs
 
-DECIMAL
-
-NAMESPACE LOCAL LOCAL::
-	0 VALUE X
-	0 VALUE Y
-SET-CURRENT
+namespace local local::
+	0 value x
+	0 value y
+set-current previous
 
 \ Add LOCAL:: X and LOCAL:: Y
-: TEST  LOCAL:: X  LOCAL:: Y  + . ;
+: test  local:: x  local:: y  + . ;
 
 \ Set LOCAL:: X to 5 and LOCAL:: Y to 7
-LOCAL
-	: TEST2  5 TO X  7 TO Y ;
-PREVIOUS
+local
+	: test2  5 to x  7 to y ;
+previous
 
-TEST2 TEST CR \ Prints 12
+test2 test cr \ Prints 12
 
-LOCAL:: X  LOCAL:: Y  * .  CR  \ Prints 35
+local:: x  local:: y  * .  cr  \ Prints 35

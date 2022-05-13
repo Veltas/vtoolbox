@@ -3,14 +3,14 @@
 \ Working with floats in the dictionary, see examples/fdict.fs
 
 \ Add a float to dictionary
-: F, ( F: f -- )  HERE  1 FLOATS ALLOT  F! ;
+: f, ( F: f)  here  1 floats allot  f! ;
 
-[DEFINED] DFLOATS [IF]
+[defined] dfloats [if]
 \ Add a double-float to dictionary
-: DF, ( F: df -- )  HERE  1 DFLOATS ALLOT  F! ;
-[ENDIF]
+: df, ( F: df)  here  1 dfloats allot  f! ;
+[endif]
 
-[DEFINED] SFLOATS [IF]
+[defined] sfloats [if]
 \ Add a single-float to dictionary
-: SF, ( F: sf -- )  HERE  1 SFLOATS ALLOT  F! ;
-[ENDIF]
+: sf, ( F: sf)  here  1 sfloats allot  f! ;
+[endif]
